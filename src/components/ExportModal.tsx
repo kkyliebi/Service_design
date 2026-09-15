@@ -38,11 +38,14 @@ export const ExportModal: React.FC<ExportModalProps> = ({ isOpen, onClose }) => 
 
   const handleNativePrint = () => {
     setPrintAttempted(true);
-    try {
-      window.print();
-    } catch (e) {
-      console.warn('Native window.print() blocked by iframe sandbox', e);
-    }
+    onClose();
+    setTimeout(() => {
+      try {
+        window.print();
+      } catch (e) {
+        console.warn('Native window.print() blocked by iframe sandbox', e);
+      }
+    }, 150);
   };
 
   const handleOpenStandalone = () => {
@@ -120,7 +123,7 @@ Design by Kylie Bi | September 2026
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200 no-print">
       <div className="relative w-full max-w-xl p-6 sm:p-8 rounded-3xl bg-white border border-zinc-200 shadow-2xl space-y-6">
         
         {/* Header */}

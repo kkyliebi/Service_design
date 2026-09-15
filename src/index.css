@@ -36,33 +36,67 @@
 
 /* Print-optimized layout and PDF rendering */
 @media print {
-  body {
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 14mm 10mm;
+    size: auto;
+  }
+
+  html, body {
     background-color: #ffffff !important;
-    color: #111827 !important;
+    color: #0f172a !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
   header, 
   nav, 
   #btn-scroll-to-top, 
   .no-print,
-  button {
+  button,
+  .fixed,
+  [role="dialog"] {
     display: none !important;
   }
 
   main {
     padding: 0 !important;
     margin: 0 !important;
+    width: 100% !important;
+    overflow: visible !important;
   }
 
   section {
-    page-break-inside: avoid;
-    break-inside: avoid;
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  /* Keep discrete cards and table rows intact across page cuts */
+  .p-4, .p-5, .p-6, .p-8, tr, table {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Unfold any horizontal/vertical scroll wrappers so all content prints */
+  div {
+    overflow: visible !important;
+    max-height: none !important;
   }
 
   table {
     border: 1px solid #e5e7eb !important;
+    width: 100% !important;
   }
 
   th, td {

@@ -18,14 +18,18 @@ import {
   X, 
   Filter,
   Eye,
-  Check
+  Check,
+  Download,
+  Printer
 } from 'lucide-react';
+import { BlueprintExportModal } from './BlueprintExportModal';
 
 export const BlueprintExplorer: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('overview');
   const [selectedActor, setSelectedActor] = useState<BlueprintActor | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [inspectedStep, setInspectedStep] = useState<BlueprintStep | null>(null);
+  const [blueprintExportOpen, setBlueprintExportOpen] = useState<boolean>(false);
 
   const actorColors: Record<BlueprintActor, { badge: string; text: string; dot: string; bg: string; border: string }> = {
     resident: { 
@@ -101,8 +105,17 @@ export const BlueprintExplorer: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-mono px-3 py-1.5 rounded-xl bg-white border border-zinc-200 text-zinc-700 flex items-center gap-2 shadow-xs">
+          <div className="flex items-center gap-2.5">
+            <button
+              id="btn-open-blueprint-export"
+              onClick={() => setBlueprintExportOpen(true)}
+              className="px-3.5 py-1.5 rounded-xl bg-[#b87a3d] hover:bg-[#a66a31] text-white text-xs font-semibold flex items-center gap-1.5 shadow-xs transition-all hover:scale-[1.02]"
+              title="Download & Print System Blueprints"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Export / Print Blueprints</span>
+            </button>
+            <span className="text-xs font-mono px-3 py-1.5 rounded-xl bg-white border border-zinc-200 text-zinc-700 hidden sm:flex items-center gap-2 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
               Pilot Architecture
             </span>
@@ -393,6 +406,12 @@ export const BlueprintExplorer: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Blueprint Export & Print Modal */}
+      <BlueprintExportModal
+        isOpen={blueprintExportOpen}
+        onClose={() => setBlueprintExportOpen(false)}
+      />
 
     </section>
   );
