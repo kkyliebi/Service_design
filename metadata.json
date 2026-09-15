@@ -1,0 +1,6 @@
+{
+  "name": "Resident Maintenance Service Integration",
+  "description": "Interactive long-form web report and Target System Blueprint v5 for the limited resident-maintenance pilot at Lombardy housing operator, designed by Kylie Bi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
