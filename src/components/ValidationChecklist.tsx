@@ -145,10 +145,10 @@ export const ValidationChecklist: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-800 font-mono mb-1">
               <ShieldCheck className="w-4 h-4" />
-              Pilot Authorization & Governance Sign-off
+              Client Review & Next-Step Approval
             </div>
             <h3 className="text-2xl font-sans font-bold text-zinc-900">
-              Technical Recommendation Endorsement
+              Initial Recommendation for Endorsement
             </h3>
             <p className="text-xs text-zinc-500 font-sans mt-1">
               Prepared for the Lombardy Housing Operator Board & IT Steering Committee.

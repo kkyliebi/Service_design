@@ -44,7 +44,7 @@ export const PrinciplesAndGovernance: React.FC = () => {
           Architectural Principles & AI Governance
         </h2>
         <p className="text-sm sm:text-base text-zinc-600 font-sans max-w-3xl leading-relaxed">
-          Robust, deterministic guardrails ensuring automation serves staff and residents without ceding critical approval, emergency, or financial authority to artificial intelligence.
+          Proposed guardrails designed to ensure automation serves staff and residents without ceding critical approval, emergency, or financial authority to AI.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export const PrinciplesAndGovernance: React.FC = () => {
 
               <div className="pt-3 border-t border-zinc-100 mt-4 text-[10px] font-mono text-zinc-500 flex items-center justify-between">
                 <span>Rule 0{idx + 1}</span>
-                <span className="text-emerald-700 font-bold">✓ Enforced</span>
+                <span className="text-emerald-700 font-bold">✓ Required Control</span>
               </div>
             </div>
           ))}
