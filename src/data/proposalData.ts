@@ -50,7 +50,7 @@ export const METRIC_BASELINE: MetricItem[] = [
     value: '3.8',
     unit: 'Business Days',
     subtext: 'Internal dashboard average (pre-pilot baseline to be standardized)',
-    badge: 'Target < 1 Day',
+    badge: 'Proposed Target < 1 Business Day',
   },
 ];
 
@@ -239,7 +239,7 @@ export const DESIGN_PRINCIPLES: DesignPrinciple[] = [
   {
     title: 'Exceptions Remain Visible',
     description: 'Low-confidence extraction, missing information, failed transmission, duplicate risk and notification failure must enter an actionable staff queue rather than disappear silently.',
-    tag: 'Zero Silent Failures',
+    tag: 'No Silent Failure by Design',
     iconName: 'AlertTriangle',
   },
 ];

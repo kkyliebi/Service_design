@@ -62,19 +62,11 @@ export const HeroExecutive: React.FC<HeroExecutiveProps> = ({ onNavigate }) => {
             </h1>
             
             <p className="text-base sm:text-lg text-zinc-600 font-sans font-normal leading-relaxed mb-6 max-w-3xl">
-              Initial recommendation for a limited resident-maintenance pilot across resident intake, case preparation, work order integration and progress communication.
+              Initial recommendation for a limited resident-maintenance pilot across resident intake, case preparation and work order integration.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 pt-3 pb-6 border-b border-zinc-200">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#b87a3d] to-[#8c521d] flex items-center justify-center font-bold text-white text-xs shadow-xs">
-                KB
-              </div>
-              <div>
-                <p className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">Author & System Architecture</p>
-                <p className="text-sm font-semibold text-zinc-900 font-sans">Design by Kylie Bi</p>
-              </div>
-              <div className="h-6 w-[1px] bg-zinc-200 mx-2 hidden sm:block" />
-              <p className="hidden sm:block text-xs text-zinc-500 max-w-sm">
+              <p className="text-xs text-zinc-500 max-w-xl">
                 Prepared for the Lombardy affordable housing operator managing ~3,000 homes.
               </p>
             </div>

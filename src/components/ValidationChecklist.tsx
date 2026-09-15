@@ -157,7 +157,7 @@ export const ValidationChecklist: React.FC = () => {
 
           <div className="flex items-center gap-3">
             <span className="p-2.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-mono font-bold">
-              Ready for Phase 1 Release
+              Ready for Client Review
             </span>
           </div>
         </div>
@@ -167,16 +167,13 @@ export const ValidationChecklist: React.FC = () => {
           
           <div className="p-5 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-2">
             <span className="text-[10px] font-mono uppercase text-zinc-500 font-bold block">
-              Lead Architect & Author
+              Service Design & Proposal Development
             </span>
             <div className="font-sans font-bold text-zinc-900 text-base">
               Kylie Bi
             </div>
-            <p className="text-xs text-zinc-600 font-sans">
-              System Architecture & Service Design Lead
-            </p>
             <div className="pt-2 text-[11px] font-mono text-emerald-700 font-semibold flex items-center gap-1">
-              <span>✓ Architecture Validated (Sept 2026)</span>
+              <span>Initial Recommendation Prepared — Sept 2026</span>
             </div>
           </div>
 
